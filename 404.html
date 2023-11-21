@@ -11,7 +11,7 @@
       fetch(document.location.href)
         .then(response => {
            if (response.status === 404) {
-             l.replace = l.protocol + '//' + l.hostname
+             l.replace(l.protocol + '//' + l.hostname);
           } else {
             l.replace(
             l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
@@ -23,7 +23,7 @@
           }
         })
       .catch(error => {
-             l.replace = l.protocol + '//' + l.hostname
+             l.replace(l.protocol + '//' + l.hostname);
       });
     </script>
   </head>
