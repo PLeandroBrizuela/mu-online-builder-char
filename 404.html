@@ -25,7 +25,7 @@
     l.hash;
 
   // Check if there is a redirection in the query string
-  if (newPath === l.href) {
+  if (newPath !== l.href) {
     // No redirection found, redirect to the homepage
     newPath = l.protocol + '//' +  "tools-mu.online" + '/';
   }
